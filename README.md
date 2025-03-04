@@ -1,4 +1,4 @@
-[![pdf](https://github.com/pbelmans/latex-template/actions/workflows/pdf.yml/badge.svg)](https://github.com/pbelmans/latex-template/actions/workflows/pdf.yml)
+[![pdf](https://github.com/pbelmans/latex-template/actions/workflows/pdf.yml/badge.svg)](https://github.com/YordanToshev/HAStSemBonn/actions/workflows/pdf.yml)
 [![pdf](https://img.shields.io/badge/pdf-syllabus-green)](https://github.com/YordanToshev/HAStSemBonn/blob/build/syllabus.pdf)
 
 Add badges as one sees fit:

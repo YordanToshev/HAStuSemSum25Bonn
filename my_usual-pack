@@ -1,0 +1,38 @@
+% Layout:
+%\special{papersize=3in,5in} % alternative layout with wider spaces
+\usepackage[a4paper]{geometry}
+
+% Encoding & Fonts:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% Packages:
+\usepackage[export]{adjustbox}    %graphics
+\usepackage{float, graphicx, wrapfig2}
+\usepackage{MnSymbol, amsfonts, dsfont, mathrsfs, stmaryrd}  % fonts
+\usepackage[bbgreekl]{mathbbol}
+%\usepackage{amssymb}
+
+\usepackage{mathtools, nicefrac} % maths
+\usepackage{relsize} %to make big operators, e.g. \bigast
+\usepackage{tikz, tikz-cd}
+\usepackage{xparse, etoolbox, xcolor, microtype}% formatting
+%\usepackage{icomma}
+\usepackage{makeidx}
+\usepackage{comment, csquotes, hyperref, enumerate}    % useful
+\hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = teal,      
+     urlcolor=blue,
+     }
+
+% Packages, which are not yet needed
+%\usepackage{afterpage, booktabs, wasysym, dirtytalk, 
+%bf, calc, faktor, xy, microtype, eqparbox, paralist}
+%\usepackage{morefloats, multirow, pgfplotstable}
+%\usepackage{chngcntr}\counterwithout{section}{chapter} %section numbering
+%\usetikzlibrary{decorations.pathreplacing, matrix, positioning, 
+%calc, angles, arrows.meta,quotes}

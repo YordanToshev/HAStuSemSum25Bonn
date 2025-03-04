@@ -1,0 +1,369 @@
+% todo: change \Sets to \Set and \Set to \brc for braces
+%Renewcommand*s
+
+% -GENERAL-
+\renewcommand*{\it}[1]{\textit{#1}} % commands \tt \bf \it are old
+\renewcommand*{\bf}[1]{\textbf{#1}} % and depricated
+\renewcommand*{\tt}[1]{\texttt{#1}}
+\newcommand*{\detail}[1]{{\scriptsize(#1)\par}~}
+\newcommand*{\refs}[1]{{\scriptsize\textit{Refs: }#1\par}\hfill.}
+\newcommand*{\what}[1]{{\color{red}Q: #1}}
+\newcommand*{\todo}[1]{{\color{green}todo #1}}
+\newenvironment{colorenv}[1]{%
+    \leavevmode\color{#1}\ignorespaces%
+}{%
+}%
+\newenvironment{forme}{%
+    \leavevmode\color{gray}\ignorespaces%
+}{%
+}%
+
+%\newcommand*{\forme}[1]{\begin{colorenv}{gray}(for me) #1\end{colorenv}}
+\newcommand*{\rot}[1]{\rotatebox[origin=c]{90}{ #1 }}
+\newcommand*{\unrot}[1]{\rotatebox[origin=c]{270}{ #1 }}
+\newcommand*{\la}{\langle}
+\newcommand*{\ra}{\rangle}
+\newcommand*{\as}[1]{\la #1 \ra} % angles
+\mathchardef\comma=\mathcode`,
+%\DeclareMathSymbol{,}{\mathord}{letters}{"3B}
+
+
+% -GENERAL-MATH-
+\newcommand*{\I}{\mathrm{i}} % imaginary unit
+\newcommand*{\E}{\mathrm{e}} % Euler number
+\DeclarePairedDelimiter\abs\lvert\rvert
+\DeclarePairedDelimiter\floor\lfloor\rfloor
+\DeclarePairedDelimiter\ceil\lceil\rceil
+\newcommand*{\nfrac}[2]{\nicefrac{#1}{#2}}
+\DeclareMathOperator\im{im}
+\DeclareMathOperator\id{id}
+\newcommand*{\cc}[1]{\overline{#1}} % complex conj
+\newcommand*{\sumin}{\sum_{i=1}^n}
+\newcommand*{\rest}[2]{{\displaystyle\upharpoonleft}_{#1}^{#2}}
+\newcommand*{\bigrest}[2]{{\big\upharpoonleft}_{#1}^{#2}}
+\DeclareMathOperator\sgn{sgn}
+\newcommand*{\tfa}{$\circlearrowright$}
+\newcommand*{\lra}{\leftrightarrow}
+\newcommand*{\rsa}{\rightsquigarrow}
+\newcommand*{\mapsot}{\leftmapsto}
+\newcommand*{\me}[1]{#1\mathellipsis#1} % mathellipsis
+\newcommand*{\fac}[1]{\Facargs{#1}}\NewDocumentCommand{\Facargs}
+        {>{\SplitArgument{1}{/}}m}
+    {\Facargsaux#1}\NewDocumentCommand{\Facargsaux}
+            {mm}
+{\raisebox{.2em}{\ensuremath{#1}}{\diagup}{\raisebox{-.2em}{\ensuremath{#2}}}}
+\DeclareMathOperator\len{length}
+\newcommand*{\bigast}{\mathop{\mathlarger{\mathlarger{\mathlarger{*}}}}}
+
+% -PROOFS-
+\newcommand*{\obda}{\textrm{W.\!L.\!O.\!G.}}
+\newcommand*{\impl}{\implies}
+\newcommand*{\limpl}{\Longleftarrow}
+\newcommand*{\rtol}{\enquote{$\Leftarrow$}: } %left to right
+\newcommand*{\ltor}{\enquote{$\Rightarrow$}: } %right to left
+
+% -SETS-
+\providecommand\given{}
+    \newcommand*\SetSymbol[1][]{%
+    \nonscript\:#1\mid
+    \allowbreak
+    \nonscript\:
+    \mathopen{}}
+%\DeclarePairedDelimiterX\Set[1]\{\}{
+%    \renewcommand*\given{\SetSymbol[\delimsize]}#1}
+\DeclarePairedDelimiterX{\sft}[1]{%set from ... to ...
+    \{}{\}} {\setftargs{#1}}
+    \NewDocumentCommand{\setftargs}{>{\SplitArgument{1}{,}}m}{\setftargsaux#1}
+    \NewDocumentCommand{\setftargsaux}{mm}
+    {\ifblank{#1}{\ifblank{#2}{\, 1 \,{\me{,}}\, n \,}
+    {{\, 1 \,}{\me{,}}{\mkern2mu#2}}}%
+    {{#1\,}{\me{,}}\ifblank{#2}{\, n \,}{\mkern2mu#2}}}
+
+      %class = cla{}
+\providecommand\given{}
+    \newcommand*\ClassSymbol[1][]{%
+    \nonscript\:#1\vert
+    \allowbreak
+    \nonscript\:
+    \mathopen{}}
+\DeclarePairedDelimiterX\cla[1]\{\}{
+    \renewcommand*\given{\ClassSymbol[\delimsize]}#1}
+\DeclarePairedDelimiterX{\cft}[1]{%class from ... to ...
+    \{}{\}} {\setftargs{#1}}
+    \NewDocumentCommand{\clascftargs}{>{\SplitArgument{1}{,}}m}{\clascftargsaux#1}
+    \NewDocumentCommand{\clascftargsaux}{mm}
+    {\ifblank{#1}{\ifblank{#2}{\, 1 \,{\me{,}}\, n \,}
+    {{\, 1 \,}{\me{,}}{\mkern2mu#2}}}%
+    {{#1\,}{\me{,}}\ifblank{#2}{\, n \,}{\mkern2mu#2}}}
+
+\newcommand*{\sq}{\subseteq}
+\newcommand*{\sqn}{\subsetneq}
+\newcommand*{\qs}{\supseteq}
+\newcommand*{\0}{\emptyset}
+\newcommand*{\4}{\mathbb{Δ}}
+\newcommand*{\zero}{\Set{0}}
+\newcommand*{\pt}{\mathrm{pt}}
+\newcommand*{\sm}{\setminus}
+\newcommand*{\smzero}{\setminus\zero}
+\DeclareMathOperator\ord{ord}
+\DeclareMathOperator\card{card}
+
+% -EQUATIONS,MAPS-
+\newcommand*{\col}{\colon}
+%\newcommand*{\}{\colon}
+\DeclareMathOperator{\dom}{dom} 
+\DeclareMathOperator{\codom}{codom} 
+\newcommand*{\mto}{\mapsto}
+\newcommand*{\deq}{\coloneq}
+\newcommand*{\ldeq}{\eqcolon}
+\newcommand*{\isorrow}{\xlongrightarrow{\sim}}
+\DeclareMathOperator{\comp}{\circ}
+%\newcommand*{\inv}[1]{{#1}^{-1}}
+\newcommand*{\inv}{{-1}}
+\newcommand*{\emb}{\hookrightarrow}
+\newcommand*{\epi}{\twoheadrightarrow}
+\newcommand*{\iso}{\simeq}
+\DeclareMathOperator{\const}{const} 
+\DeclareMathOperator{\pr}{pr} 
+\DeclareMathOperator{\incl}{incl} 
+\DeclareMathOperator{\map}{map} 
+
+% -TOPO-
+\newcommand*{\bound}{\partial}
+\DeclareMathOperator\supp{supp}
+\newcommand*{\sph}{\mathrm{S}} % sphere
+\DeclareMathOperator\sk{sk} % skeleton
+%\DeclareMathOperator\cell{cell} % cellular
+\newcommand*\cell{\mathrm{cell}} % cellular
+\newcommand*\fin{\mathrm{fin}} % cellular
+\newcommand*\Gr{\mathrm{Gr}} % Grassmannian
+\DeclareMathOperator{\Cyl}{Cyl} 
+
+
+
+% -CALCULUS-
+\newcommand*{\pard}[1]{\partial_{#1}\,}
+\newcommand*{\D}[1]{\ensuremath{\operatorname{D}\!{#1}\,}}
+\newcommand*{\Dd}[2]{\ensuremath{\operatorname{d}\!{^{#1}\,\!{#2}}}\,}
+\newcommand*{\df}[2]{\frac{\D{#1}}{\D{#2}}\,}
+\newcommand*{\dd}[2]{\frac{\D^{#1}}{\D{#2}\!^{#1}}}
+\newcommand*{\appr}[1]{\xlongrightarrow{#1}}
+\DeclarePairedDelimiterX\norm[1]\lVert\rVert{
+    \ifblank{#1}{\:\cdot\:}{#1}
+}
+\newcommand*{\normt}[1]{\norm{#1}_2}
+\newcommand*{\normtt}[1]{\norm{#1}_2^2}
+
+% -LINEAR ALGEBRA-
+\DeclarePairedDelimiterX{\hull}[1]{\langle}{\rangle}{#1}
+%\newcommand*{\hull}[1]{\left\langle #1 \right\rangle}
+\DeclareMathOperator\kspan{span}
+\renewcommand*{\vec}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand*{\veca}{\begin{pmatrix}a_1\\\vdots\\a_n\end{pmatrix}}
+\newcommand*{\vecb}{\begin{pmatrix}b_1\\\vdots\\b_n\end{pmatrix}}
+\DeclareMathOperator\tr{tr}
+\DeclareMathOperator\M{M}
+\DeclareMathOperator\Mat{Mat}
+\DeclareMathOperator\diag{diag}
+\DeclareMathOperator\rg{rg}         %rang
+\DeclareMathOperator\rk{rk}         %rank
+\DeclarePairedDelimiterX{\innerp}[1]{\langle}{\rangle}
+    {\Innpargs{#1}}\NewDocumentCommand{\Innpargs}
+        {>{\SplitArgument{1}{,}}m}
+    {\Innpargsaux#1}\NewDocumentCommand{\Innpargsaux}
+            {mm}
+    {\ifblank{#1}
+        {\ifblank{#2}{\, \cdot \,{,}\, \cdot \,}
+            {{\, \cdot \,}{,}{\mkern2mu#2}}}%
+        {{#1\,}{,}\ifblank{#2}
+            {\, \cdot \,}{\mkern2mu#2}}}
+\newcommand*{\ddotp}{\innerp{,}}
+\newcommand*{\qform}[1]{\innerp{#1,#1}}
+\DeclareMathOperator\Pf{Pf}
+\DeclareMathOperator\EW{EW}
+\DeclareMathOperator\EV{EV}
+\DeclareMathOperator\Bew{\mathcal{B}}
+
+
+% -GROUPS-
+\newcommand*{\symg}{\mathfrak{S}}
+\newcommand*{\Orth}{\Og(V,\ddotp)}
+\newcommand*{\sOrth}{\sOg(V,\ddotp)}
+\newcommand*{\Gl}{\mathit{Gl}}
+\newcommand*{\Cl}{\mathit{Cl}}
+\newcommand*{\Og}{\mathit{O}}
+\newcommand*{\sOg}{\mathit{SO}}
+\newcommand*{\Sl}{\mathit{Sl}}
+\newcommand*{\Ug}{\mathit{U}}
+\newcommand*{\sUg}{\mathit{SU}}
+\newcommand*{\Pin}{\mathit{Pin}}
+\newcommand*{\Spin}{\mathit{Spin}}
+
+% -ALGEBRA-
+\newcommand*{\units}[1]{#1^{\times}}
+\newcommand*{\rad}[1]{\sqrt{#1}}
+\newcommand*{\one}{\mathsf{1}}
+\newcommand*{\unit}{\mathsf{1}}
+\DeclarePairedDelimiterX{\comm}[1]{[}{]}
+    {\commargs{#1}}\NewDocumentCommand{\commargs}
+        {>{\SplitArgument{1}{,}}m}
+    {\commargsaux#1}\NewDocumentCommand{\commargsaux}
+            {mm}
+    {\ifblank{#1}
+        {\ifblank{#2}{\, \cdot \,{,}\, \cdot \,}
+            {{\, \cdot \,}{,}{\mkern2mu#2}}}%
+        {{#1\,}{,}\ifblank{#2}
+            {\, \cdot \,}{\mkern2mu#2}}}
+%\newcommand*{\comm}[2]{\left[#1,#2\right]}       %commutator
+\newcommand*{\ext}[1]{\fac{#1}}         %extention
+\DeclareMathOperator\chr{char}                  %character
+\DeclareMathOperator\Abb{Abb}
+%\DeclareMathOperator\Map{Map}
+\newcommand*\Map{\mathsf{Map}}
+\DeclareMathOperator\Bij{Bij}
+\DeclareMathOperator\Lin{Lin}
+\DeclareMathOperator\Bil{Bil}
+\DeclareMathOperator\BLF{BLF}
+\DeclareMathOperator\End{End}
+\DeclareMathOperator\Gal{Gal}
+\DeclareMathOperator\Aut{Aut} 
+\DeclareMathOperator\Ext{Ext}
+\DeclareMathOperator\Tor{Tor}
+\DeclareMathOperator\Quot{Quot}
+\DeclareMathOperator\Spec{Spec}
+\DeclareMathOperator\MaxSpec{MaxSpec}
+\DeclareMathOperator\ev{ev}
+\DeclareMathOperator\grad{grad}
+\DeclareMathOperator\Nil{Nil}
+\DeclareMathOperator\red{red}
+\DeclareMathOperator\Jac{Jac}
+\DeclareMathOperator\Mod{Mod}
+\DeclareMathOperator\add{add}
+\DeclareMathOperator\gen{gen}
+\DeclareMathOperator\cogen{cogen}
+\DeclareMathOperator\Rep{Rep}
+\DeclareMathOperator\height{ht}
+\DeclareMathOperator\Ass{Ass}
+\DeclareMathOperator\Div{Div}
+\DeclareMathOperator\Prin{Prin}
+\DeclareMathOperator\Pic{Pic}
+\DeclareMathOperator\bilin{bilin}
+\DeclarePairedDelimiterX\fps[1]{[[}{]]}{#1} %todo %formal poser series
+\DeclareMathOperator\Proj{Proj}
+\DeclareMathOperator\proj{proj}
+\DeclareMathOperator\Inj{Inj}
+\DeclareMathOperator\inj{inj}
+\DeclareMathOperator\depth{depth}
+
+
+% -REP-THEO-
+\DeclareMathOperator\rep{rep}
+\DeclareMathOperator\Bimod{Bimod}
+\DeclareMathOperator\Br{Br}
+\DeclareMathOperator\soc{soc}
+\DeclareMathOperator\radmod{rad}
+\DeclareMathOperator\topmod{top}
+\DeclareMathOperator\gr{gr} % graded
+\newcommand*{\lMod}[1]{\prescript{}{#1}{\Mod}}
+
+% -LOGIC-
+\newcommand*{\m}{\models}
+
+\newcommand*{\ts}{t_0 \cdots t_r}
+\newcommand*{\xs}{x_0 \cdots x_r}
+\newcommand*{\xsu}{x_1 \cdots x_n}
+\newcommand*{\tsu}{t_1 \cdots t_n}
+\DeclareMathOperator\frei{frei}
+\DeclareMathOperator\Wf{Wf}
+\DeclareMathOperator\Erf{Erf}
+\DeclareMathOperator\Th{Th}
+
+% -CATS-
+\DeclareMathOperator\coker{coker}
+\DeclareMathOperator\Sing{Sing}
+\DeclareMathOperator\coim{coim}
+\DeclareMathOperator\colim{colim}
+\DeclareMathOperator\coeq{coeq}
+\DeclareMathOperator\Cone{Cone}
+\DeclareMathOperator\Tel{Tel}
+\DeclareMathOperator\eq{eq}
+\DeclareMathOperator\rests{rest}
+\DeclareMathOperator\ind{ind}
+\DeclareMathOperator\coind{coind}
+\DeclareMathOperator\Ob{\mathsf{Ob}}
+\DeclareMathOperator\Hom{Hom}
+%\DeclareMathOperator\hom{hom}
+\DeclareMathOperator\Vect{\mathsf{Vect}}
+\DeclareMathOperator\Ab{\mathsf{Ab}}
+\DeclareMathOperator\Set{\mathsf{Set}}
+\DeclareMathOperator\Fin{\mathsf{Fin}}
+\DeclareMathOperator\Grp{\mathsf{Grp}}
+\DeclareMathOperator\An{\mathsf{An}}
+\newcommand*\Top{\mathsf{Top}}
+\DeclareMathOperator\SHC{\mathit{SHC}}
+%\DeclareMathOperator\hoTop{ho\mathsf{Top}}
+\DeclareMathOperator\Hd{\mathsf{Hd}}
+\DeclareMathOperator\CW{\mathsf{CW}}
+%\DeclareMathOperator\hoCW{ho\mathsf{CW}}
+\DeclareMathOperator\Ch{\mathsf{Ch}}
+\DeclareMathOperator\Tot{\mathsf{Tot}}
+\DeclareMathOperator\Mor{\mathsf{Mor}}
+\DeclareMathOperator\Ring{\mathsf{Ring}}
+\DeclareMathOperator\cRing{\mathsf{cRing}}
+\DeclareMathOperator\Rng{\mathsf{Rng}}
+\DeclareMathOperator\cRng{\mathsf{cRng}}
+%\DeclareMathOperator\catpSh{\mathsf{pSh}}
+\DeclareMathOperator\Sh{\mathsf{Sh}}
+\DeclareMathOperator\PSh{\mathsf{PSh}}
+%\DeclareMathOperator\sSet{\mathsf{sSet}}
+\newcommand*\sSet{\mathsf{sSet}}
+\DeclareMathOperator\sCat{\mathsf{sCat}}
+\DeclareMathOperator\sAb{\mathsf{sAb}}
+%\DeclareMathOperator\Cat{\mathsf{Cat}}
+\newcommand*\Cat{\mathsf{Cat}}
+\DeclareMathOperator\Cati{\mathsf{Cat}_\infty}
+\DeclareMathOperator\QCat{\mathsf{QCat}}
+\DeclareMathOperator\Kan{\mathsf{Kan}}
+\DeclareMathOperator\Lan{\mathsf{Lan}}
+\DeclareMathOperator\Ran{\mathsf{Ran}}
+\DeclareMathOperator\Fun{\mathsf{Fun}}
+\DeclareMathOperator\Nat{\mathsf{Nat}}
+\DeclareMathOperator\Ar{\mathsf{Ar}}
+%\DeclareMathOperator\op{op}
+%\DeclareMathOperator\co{co}
+%\newcommand*{\op}[1]{{#1}^{\mathrm{op}}}      %opposite category
+\newcommand*{\op}{\mathrm{op}}      %opposite category
+%\newcommand*{\co}[1]{{#1}^{\mathrm{co}}}      %co-category
+\newcommand*{\co}{\mathrm{co}}      %co-category
+
+% -INFTY CATS-
+\newcommand*{\Sp}{\mathrm{Sp}}
+
+% -MODEL CATS, HOMOTOPY THEORY-
+\DeclareMathOperator\ho{ho}
+\DeclareMathOperator\fib{fib}
+\DeclareMathOperator\cof{cof}
+\DeclareMathOperator\hofib{hofib}
+\DeclareMathOperator\cofib{cofib}
+\DeclareMathOperator\hocofib{hocofib}
+\DeclareMathOperator\holim{holim}
+\DeclareMathOperator\hocolim{hocolim}
+\newcommand{\arrowa}{\rightleftharpoons}
+\newcommand*{\fibto}{\twoheadrightarrow}      %fibration to
+\newcommand*{\lfibto}{\twoheadleftarrow}      %fibration to
+\newcommand*{\cofibto}{\rightarrowtail}
+\newcommand*{\lcofibto}{\leftarrowtail}
+\DeclareMathOperator\St{St}    %stabilisation
+
+% -SPECTRA-
+\newcommand*{\MO}{\mathrm{MO}}
+\newcommand*{\MU}{\mathrm{MU}}
+
+
+% -AlMa-
+%\usepackage{algpseudocode, listings}
+%\lstset { %
+%language=C++,
+%backgroundcolor=\color{black!5}, % set backgroundcolor
+%basicstyle=\footnotesize,% basic font setting
+%}

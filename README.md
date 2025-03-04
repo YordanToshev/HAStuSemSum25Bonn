@@ -4,3 +4,6 @@
 
 On this page you find a **Syllabus** and additional material for a seminar on higher algebra organised by students at the University of Bonn during the summer term 2025. 
 To view the pdf, press the bade labelled "syllabus" above.
+
+**:clipboard: A compiled PDF can be found [here](https://github.com/YordanToshev/HAStuSemSum25Bonn/blob/9f7d64dee82dd1c641ff3e6685be5611b4d8cc64/syllabus.pdf).**
+J

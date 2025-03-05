@@ -18,4 +18,4 @@ jobs:
           git status
           git checkout web
           git status
-          git checkout build /syllabus.pdf # copy files from the source branch
+          git checkout build syllabus.pdf # copy files from the source branch

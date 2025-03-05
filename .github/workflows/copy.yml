@@ -1,5 +1,4 @@
 name: Copy folder to other branch
-
 on:
   workflow_dispatch:
   push:
@@ -7,7 +6,6 @@ on:
       - build
     paths:
       - "**.pdf"
-      
 jobs:
   copy:
     name: Copy pdf

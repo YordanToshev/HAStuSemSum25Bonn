@@ -16,5 +16,4 @@ jobs:
         run: |
           git status
           git fetch
-          git checkout web
           git checkout build syllabus.pdf # copy files from the source branch

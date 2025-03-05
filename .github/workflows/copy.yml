@@ -16,5 +16,5 @@ jobs:
         run: |
           git status
           git fetch
-          git restore --source build /syllabus.pdf
+          git restore --source build origin/build/syllabus.pdf
           

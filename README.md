@@ -1,6 +1,5 @@
 ## Higher Algebra - Student Seminar
-### Summer Term 2025
-### University of Bonn
+### Summer Term 2025 - University of Bonn
 
 On this page you find a _syllabus_ (and later maybe also additional material) for a seminar on Higher Algebra organised by students at the University of Bonn during the Summer Term 2025. 
 

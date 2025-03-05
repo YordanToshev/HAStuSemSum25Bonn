@@ -20,5 +20,5 @@ jobs:
           # create a new branch
           git checkout -b web
           # retrieve some files from master branch
-          git checkout build -- syllabus.pdf
+          git checkout web -- syllabus.pdf
           git commit -m "create new branch"

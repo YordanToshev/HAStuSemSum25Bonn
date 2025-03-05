@@ -13,9 +13,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: copy
-        env:
-          SOURCE_BRANCH: ''
-          TARGET_BRANCH: 'web'
         run: |
-          git checkout -b web
           git checkout web -- "syllabus.pdf" # copy files from the source branch

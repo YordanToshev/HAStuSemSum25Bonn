@@ -17,4 +17,5 @@ jobs:
           SOURCE_BRANCH: ''
           TARGET_BRANCH: 'web'
         run: |
+          git checkout web
           git checkout web -- "syllabus.pdf" # copy files from the source branch

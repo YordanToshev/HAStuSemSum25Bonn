@@ -17,4 +17,4 @@ jobs:
           SOURCE_BRANCH: ''
           TARGET_BRANCH: 'web'
         run: |
-          git copy build web "syllabus.pdf"
+          git clone build web "syllabus.pdf"

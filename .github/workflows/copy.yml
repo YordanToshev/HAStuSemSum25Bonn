@@ -16,4 +16,5 @@ jobs:
         run: |
           git status
           git fetch
-          git checkout build -- syllabus.pdf # copy files from the source branch
+          git restore --source build /syllabus.pdf
+          

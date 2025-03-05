@@ -18,6 +18,7 @@ jobs:
           TARGET_BRANCH: 'web'
         run: |
           git fetch                         # fetch branches
+          git checkout build
           git checkout web
           git checkout build -- "syllabus.pdf" # copy files from the source branch
           git add -A

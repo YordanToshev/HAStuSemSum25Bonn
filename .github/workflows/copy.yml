@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: copy
         run: |
-          git checkout web -- "syllabus.pdf" # copy files from the source branch
+          git checkout web /syllabus.pdf # copy files from the source branch

@@ -14,8 +14,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: copy
         run: |
+          git status
           git fetch
-          git status
           git checkout web
-          git status
           git checkout build syllabus.pdf # copy files from the source branch

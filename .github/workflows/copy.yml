@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - build
+      - main
     paths:
       - "**.pdf"
 jobs:
@@ -20,5 +20,5 @@ jobs:
           # create a new branch
           git checkout -b web
           # retrieve some files from master branch
-          git checkout web -- syllabus.pdf
+          git checkout build -- syllabus.pdf
           git commit -m "create new branch"

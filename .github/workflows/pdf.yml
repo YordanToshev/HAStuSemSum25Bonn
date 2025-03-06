@@ -51,6 +51,7 @@ jobs:
           git remote update
           git fetch --all
           git checkout web
+          git restore --source main github-artifacts/*/*.pdf
           git checkout main
           mkdir -p github-deploy && mv github-artifacts/*/* github-deploy
       - name: Deploy on orphan branch

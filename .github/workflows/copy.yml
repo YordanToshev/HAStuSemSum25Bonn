@@ -11,12 +11,10 @@ jobs:
     name: Copy pdf
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: copy
+      - uses: actions/checkout@v3
+      - name: Fetch file from another branch
         run: |
-          git status
-          git remote update
-          git fetch
-          git checkout web
-          git restore --source build origin/build/syllabus.pdf
+          git fetch origin build:build --force
+          git show build:syllabus.pdf > syllabus.pdf
+          git diff 
           

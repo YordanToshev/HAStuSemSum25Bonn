@@ -49,7 +49,7 @@ jobs:
       - name: Move pdf
         run: |
           git remote update
-          git fetch -- all
+          git fetch --all
           git checkout web
           git checkout main
           mkdir -p github-deploy && mv github-artifacts/*/* github-deploy

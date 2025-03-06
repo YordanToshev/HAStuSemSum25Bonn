@@ -20,8 +20,9 @@ jobs:
           git fetch --all
           git switch build 
           git switch web
+          git rm syllabus.pdf
+          git commit -m "remove syllabus.pdf"
           git restore --source build -SW -- syllabus.pdf
           git ls-files
-          git commit -m 'Copy'
-          git push
-          git ls-files
+          git commit -m 'copy syllabus.pdf'
+          git push origin web

@@ -4,11 +4,11 @@
 
 As a continuation of the [reading group on Infinity Categories](https://jonasheintze.gitlab.io/teaching/readinggroup.html), Jonas Heintze and I are organizing a reading group on Higher Algebra, based on Ferdinand Wagner's K-Theory [notes](https://florianadler.github.io/AlgebraBonn/KTheory.pdf). For a regularly updated [syllabus](https://yordantoshev.github.io/HAStuSemSum25Bonn/syllabus.pdf), klick the violet badge above! There you find more information on [preliminaries](https://github.com/FlorianAdler/inftyCats) and the concept. If you wish to participate, you can email us or attend the preliminary meeting!
 
-### Philosophy
-As can be seen in the syllabus, each session is split into two, meaning that two people will be talking each week. In this way, we hope to reduce the load on each single one of us and force ourselves to engage more with the material, as the preparation would require discussing with a partner. Be aware, that this is not a seminar for which you can get credit points or a grade! But that is the good part about it: we can take ourselves more time to adress questions and have discussions to help us understand the material better, in an appreciative and encouraging environment. Nobody is expected to have answers to every question, but we want to find solutions together.
-
 ### Organization
 Monday 18:15, Seminarroom tbd. The first meeting will be 07th of April.
+
+### Philosophy
+As can be seen in the syllabus, each session is split into two, meaning that two people will be talking each week. In this way, we hope to reduce the load on each single one of us and force ourselves to engage more with the material, as the preparation would require discussing with a partner. Be aware, that this is not a seminar for which you can get credit points or a grade! But that is the good part about it: we can take ourselves more time to adress questions and have discussions to help us understand the material better, in an appreciative and encouraging environment. Nobody is expected to have answers to every question, but we want to find solutions together.
 
 ### Additional Material
 Something might appear here later.

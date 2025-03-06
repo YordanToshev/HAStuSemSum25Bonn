@@ -20,8 +20,8 @@ jobs:
           git fetch --all
           git checkout build 
           git switch web
-          git restore --source origin/build syllabus.pdf
-          git restore --source origin/build -- "syllabus.pdf"
+          git restore --source build syllabus.pdf
+          git restore --source build -- "syllabus.pdf"
           git ls-files
           git commit -m 'Copy'
           git push

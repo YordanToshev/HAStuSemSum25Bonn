@@ -7,4 +7,4 @@ This GitHub repository hosts material for a student seminar on Higer Algebra run
 - A syllabus in pdf format is [here](https://yordantoshev.github.io/HAStuSemSum25Bonn/syllabus.pdf).
 - An indicator of the pdf compilation status is here [![pdf](https://github.com/YordanToshev/HAStSemBonn/actions/workflows/pdf.yml/badge.svg)](https://github.com/YordanToshev/HAStSemBonn/actions/workflows/pdf.yml). Everything is fine? 
 
-PS: I thank Pieter Belmans for his wonderful github latex [template](https://pbelmans.ncag.info/blog/2023/08/17/github-latex-template/), and Gabriel for making me aware of its existence.
+PS: I thank Pieter Belmans for his wonderful github latex [template](https://pbelmans.ncag.info/blog/2023/08/17/github-latex-template/), and Gabriel for making me aware of its existence. :hearts:

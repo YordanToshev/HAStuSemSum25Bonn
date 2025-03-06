@@ -47,7 +47,12 @@ jobs:
         with:
           path: github-artifacts
       - name: Move pdf
-        run: mkdir -p github-deploy && mv github-artifacts/*/* github-deploy
+        run: |
+          git status
+          git checkout web
+          git restore --source main github-artifacts/*/*.pdf
+          git checkout main
+          mkdir -p github-deploy && mv github-artifacts/*/* github-deploy
       - name: Deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -72,13 +77,3 @@ jobs:
         env:
           SOURCE_BRANCH: 'build'
           TARGET_BRANCH: 'web'
-        run: |
-          files=$(find $SOURCE_BRANCH -type f) # get the file list
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git fetch                         # fetch branches
-          git checkout $TARGET_BRANCH       # checkout to your branch
-          git checkout ${GITHUB_REF##*/} -- 'syllabus.pdf' # copy files from the source branch
-          git add -A
-          git diff-index --quiet HEAD ||  git commit -am "deploy files"  # commit to the repository (ignore if no modification)
-          git push origin $TARGET_BRANCH # push to remote branch

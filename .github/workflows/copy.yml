@@ -19,6 +19,6 @@ jobs:
           git fetch origin build:build --force
           git checkout web
           git ls-files
-          git checkout build -- ./syllabus.pdf
+          git checkout build syllabus.pdf
           git diff 
           git push origin web

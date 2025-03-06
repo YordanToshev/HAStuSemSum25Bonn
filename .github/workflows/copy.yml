@@ -21,8 +21,6 @@ jobs:
           git checkout build 
           git switch web
           git restore --source build -SW -- syllabus.pdf
-          git restore --source build -SW -- "syllabus.pdf"
-          git add
           git ls-files
           git commit -m 'Copy'
           git push

@@ -48,11 +48,6 @@ jobs:
           path: github-artifacts
       - name: Move pdf
         run: |
-          git remote update
-          git fetch --all
-          git checkout web
-          git restore --source main github-artifacts/*/*.pdf
-          git checkout main
           mkdir -p github-deploy && mv github-artifacts/*/* github-deploy
       - name: Deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v4
@@ -70,12 +65,21 @@ jobs:
           name: pdfs
   copy:
     needs: [deploy]
-    name: Copy pdf
+    name: Copy pdf to web branch
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: copy
-        env:
-          SOURCE_BRANCH: 'build'
-          TARGET_BRANCH: 'web'
-        run: git status
+      - uses: actions/checkout@v3
+      - name: Fetch file from another branch
+        run: |
+          git config user.email "yordan.toshev@uni-bonn.de"
+          git config user.name "Yordan Toshev"
+          git remote update
+          git fetch --all
+          git switch build 
+          git switch web
+          git rm syllabus.pdf
+          git commit -m "remove syllabus.pdf"
+          git restore --source build -SW -- syllabus.pdf
+          git ls-files
+          git commit -m 'copy syllabus.pdf'
+          git push origin web

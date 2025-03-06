@@ -23,7 +23,7 @@ jobs:
           git checkout web
           git ls-files 
           git switch web
-          git restore --source origin/build syllabus.pdf
+          git restore --source origin/build "syllabus.pdf"
           git restore --source origin/build -- syllabus.pdf
           git ls-files
           git commit -m 'Copy'

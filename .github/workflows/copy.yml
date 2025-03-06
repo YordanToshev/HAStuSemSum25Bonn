@@ -18,6 +18,8 @@ jobs:
           git config user.name "Your Name"
           git remote update
           git fetch --all
+          git checkout build
+          git ls-files
           git checkout web
           git ls-files
           git checkout build "syllabus.pdf"

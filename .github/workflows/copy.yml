@@ -18,13 +18,10 @@ jobs:
           git config user.name "Yordan Toshev"
           git remote update
           git fetch --all
-          git checkout build
-          git ls-files
-          git checkout web
-          git ls-files 
+          git checkout build 
           git switch web
-          git restore --source origin/build "syllabus.pdf"
-          git restore --source origin/build -- syllabus.pdf
+          git restore --source origin/build syllabus.pdf
+          git restore --source origin/build -- "syllabus.pdf"
           git ls-files
           git commit -m 'Copy'
           git push

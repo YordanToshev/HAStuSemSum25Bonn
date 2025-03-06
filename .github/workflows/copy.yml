@@ -20,4 +20,4 @@ jobs:
           git ls-files
           git checkout web
           git ls-files
-          git restore --source build "syllabus.pdf"
+          git restore --source build "./syllabus.pdf"

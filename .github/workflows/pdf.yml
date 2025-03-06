@@ -77,3 +77,4 @@ jobs:
         env:
           SOURCE_BRANCH: 'build'
           TARGET_BRANCH: 'web'
+        run: git status

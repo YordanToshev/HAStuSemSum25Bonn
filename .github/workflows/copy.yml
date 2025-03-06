@@ -14,7 +14,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch file from another branch
         run: |
-          git fetch origin build:build --force
-          git show build:syllabus.pdf > syllabus.pdf
-          git diff 
-          
+          git remote update
+          git fetch --all
+          git checkout web
+          git restore --source build ./syllabu.pdf
+          git checkout main
+

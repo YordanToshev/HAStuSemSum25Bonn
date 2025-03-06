@@ -21,4 +21,4 @@ jobs:
           git checkout web
           git ls-files
           git checkout build "syllabus.pdf"
-          git commit -m 
+          git commit -m 'Copy'

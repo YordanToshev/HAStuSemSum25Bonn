@@ -48,7 +48,6 @@ jobs:
           path: github-artifacts
       - name: Move pdf
         run: |
-          git status
           git checkout web
           git checkout main
           mkdir -p github-deploy && mv github-artifacts/*/* github-deploy

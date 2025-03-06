@@ -18,7 +18,8 @@ jobs:
           git fetch --all
           git fetch origin build:build --force
           git show build:syllabus.pdf > syllabus.pdf
-          git diff 
           git checkout web
           git restore --source build ./syllabus.pdf
+          git diff 
+          git push origin web
           git checkout main

@@ -1,4 +1,4 @@
-name: Copy pdf to web branch
+name: copy pdf to web branch
 on:
   workflow_dispatch:
   push:

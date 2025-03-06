@@ -1,9 +1,12 @@
 ## Higher Algebra - Student Seminar
-### Summer Term 2025 - University of Bonn
 
-On this page you find a [syllabus](https://yordantoshev.github.io/HAStuSemSum25Bonn/syllabus.pdf) (and later maybe further material) for a seminar on Higher Algebra organised by students at the University of Bonn during the Summer Term 2025. 
+#### This GitHub repository hosts material for a student seminar on Higer Algebra run by [Jonas](https://jonasheintze.gitlab.io/index.html) and I during the summer term 2025 at the [University of Bonn](http://www.math.uni-bonn.de/).
 
-<!--- A compiled PDF of the syllabus can be found here. --->
+- A dedicated webpage is [here](https://yordantoshev.github.io/HAStuSemSum25Bonn/).
+- A dedicated webpage run by Jonas is [here](https://jonasheintze.gitlab.io/teaching/HA.html).
+- A syllabus in pdf format is [here](https://yordantoshev.github.io/HAStuSemSum25Bonn/syllabus.pdf)
 
+Everything is fine? 
 [![pdf](https://github.com/YordanToshev/HAStSemBonn/actions/workflows/pdf.yml/badge.svg)](https://github.com/YordanToshev/HAStSemBonn/actions/workflows/pdf.yml)
-[![pdf](https://img.shields.io/badge/pdf-syllabus-green)](https://github.com/YordanToshev/HAStSemBonn/blob/build/syllabus.pdf)
+
+PS: I thank Pieter Belmans for his wonderful github latex [template](https://pbelmans.ncag.info/blog/2023/08/17/github-latex-template/), and Gabriel for making me aware of its existence.

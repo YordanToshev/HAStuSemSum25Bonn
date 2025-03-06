@@ -19,8 +19,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Install and run Git hooks
         run: |
-          git remote update
-          git fetch
           git config core.hooksPath .githooks/
           git checkout
       - name: Compile LaTeX document
@@ -50,6 +48,8 @@ jobs:
           path: github-artifacts
       - name: Move pdf
         run: |
+          git remote update
+          git fetch -- all
           git checkout web
           git checkout main
           mkdir -p github-deploy && mv github-artifacts/*/* github-deploy

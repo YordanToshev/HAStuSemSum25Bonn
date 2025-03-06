@@ -15,20 +15,17 @@ jobs:
       - name: Fetch file from another branch
         run: |
           git config user.email "you@example.com"
-          git config user.name "Your Name"
+          git config user.name "Yordan Toshev"
           git remote update
           git fetch --all
           git checkout build
           git ls-files
           git checkout web
-          git ls-files
-          git checkout origin/build "syllabus.pdf"
-          git checkout origin/build -- syllabus.pdf
-          git commit -m "Copy1"
-          git push
+          git ls-files 
           git switch web
           git restore --source origin/build syllabus.pdf
           git restore --source origin/build -- syllabus.pdf
           git ls-files
           git commit -m 'Copy'
+          git push
           git ls-files

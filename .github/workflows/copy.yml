@@ -11,7 +11,7 @@ jobs:
     name: Copy pdf
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Fetch file from another branch
         run: |
           git remote update

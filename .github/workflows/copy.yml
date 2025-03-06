@@ -16,7 +16,8 @@ jobs:
         run: |
           git remote update
           git fetch --all
-          git fetch origin build:build --force
+          git checkout build
+          git ls-files
           git checkout web
           git ls-files
           git restore --source build syllabus.pdf

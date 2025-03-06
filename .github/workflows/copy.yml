@@ -22,4 +22,3 @@ jobs:
           git checkout build ./syllabus.pdf
           git diff 
           git push origin web
-          git checkout main

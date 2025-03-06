@@ -15,6 +15,8 @@ jobs:
       - name: copy
         run: |
           git status
+          git remote update
           git fetch
+          git checkout web
           git restore --source build origin/build/syllabus.pdf
           
